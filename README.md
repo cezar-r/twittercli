@@ -58,7 +58,6 @@ this
 
 4-4-2023 1:08 PM
 ----------------------------------------
-
 Prev[1]        Next[2]        Retweet[3]
 
 Home[#]  Search[s]  Tweet[d]  Profile[f]
