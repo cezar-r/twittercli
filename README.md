@@ -41,6 +41,8 @@ public static List<Tweet> findRelevantTweets() {
   
   // fill rest with random
   
+  // shuffle it slightly
+  
   return tweets;
 }
 ```
