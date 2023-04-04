@@ -16,7 +16,7 @@ Exit [Any key]
 ```
 - Where the code underneath would look something like:
 
-```
+```java
 public static void run() {
   option = input("Login[1]\n...");
   switch (opton):
@@ -28,7 +28,7 @@ public static void run() {
 - When the user logs in, it will check if the password matches with the one in the database. If the user signs up, it will create a new user in the database. 
 - Once this is done, it will preload 50 tweets for the feed.
 
-```
+```java
 public static List<Tweet> findRelevantTweets() {
 
   List<Tweet> tweets = new List<Tweet>();
