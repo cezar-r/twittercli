@@ -13,7 +13,7 @@ public class TwitterCLIViewerController {
 
     private static String curUsername;
     private static Scanner scanner;
-    private static ArrayList<Tweet> userFeed = new ArrayList<Tweet>();
+    private static final ArrayList<Tweet> userFeed = new ArrayList<>();
     private static int curTweetIndex = 0;
 
     public TwitterCLIViewerController() {

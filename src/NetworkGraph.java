@@ -1,11 +1,10 @@
-import java.util.ArrayList;
 import java.util.HashSet;
 
 public class NetworkGraph {
 
     private static UserData userData;
     private static String startingNode;
-    private static final HashTable<String, HashSet<String>> graph = new HashTable<String, HashSet<String>>();
+    private static final HashTable<String, HashSet<String>> graph = new HashTable<>();
 
     public NetworkGraph(UserData newUserData) {
         userData = newUserData;
@@ -14,7 +13,7 @@ public class NetworkGraph {
 
     private static void buildGraph() {
         for (String username: userData.keySet()) {
-            graph.put(username, new HashSet<String>(userData.getFollowing(username)));
+            graph.put(username, new HashSet<>(userData.getFollowing(username)));
             if (startingNode == null) {
                 startingNode = username;
             }

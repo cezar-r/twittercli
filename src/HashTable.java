@@ -4,7 +4,7 @@ import java.util.Set;
 
 public class HashTable<K, V> {
     private static final int DEFAULT_CAPACITY = 16;
-    private LinkedList<Entry<K, V>>[] table;
+    private final LinkedList<Entry<K, V>>[] table;
     private int size = 0;
 
     public HashTable() {
@@ -72,7 +72,7 @@ public class HashTable<K, V> {
     }
 
     private static class Entry<K, V> {
-        private K key;
+        private final K key;
         private V value;
 
         public Entry(K key, V value) {

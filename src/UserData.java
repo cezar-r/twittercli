@@ -6,9 +6,9 @@ import java.text.ParseException;
 
 public class UserData {
 
-    private static HashTable<String, HashTable<String, Object>> userData = new HashTable<String, HashTable<String, Object>>();
+    private static final HashTable<String, HashTable<String, Object>> userData = new HashTable<>();
 
-    public UserData () {
+    public UserData() {
         fill();
     }
 
@@ -21,7 +21,7 @@ public class UserData {
     }
 
     public void registerUser(String username, String password) {
-        HashTable<String, Object> newUserData = new HashTable<String, Object>();
+        HashTable<String, Object> newUserData = new HashTable<>();
         newUserData.put("tweets", new ArrayList<Tweet>());
         newUserData.put("retweets", new ArrayList<Tweet>());
         newUserData.put("followers", new ArrayList<String>());
@@ -199,10 +199,10 @@ public class UserData {
             int passwordHash
     ) {
         HashTable<String, Object> user = new HashTable<String, Object>();
-        user.put("tweets", new ArrayList<Tweet>(tweets));
-        user.put("retweets", new ArrayList<Tweet>(retweets));
-        user.put("followers", new ArrayList<String>(followers));
-        user.put("following", new ArrayList<String>(following));
+        user.put("tweets", new ArrayList<>(tweets));
+        user.put("retweets", new ArrayList<>(retweets));
+        user.put("followers", new ArrayList<>(followers));
+        user.put("following", new ArrayList<>(following));
         user.put("password", passwordHash);
         return user;
     }
