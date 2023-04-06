@@ -1,0 +1,353 @@
+{
+  "user1": {
+    "tweets": [
+      {
+        "content": "Hello, world!",
+        "author": "user1",
+        "createdAt": "01-01-2023"
+      },
+      {
+        "content": "I love programming!",
+        "author": "user1",
+        "createdAt": "01-02-2023"
+      }
+    ],
+    "retweets": [
+      {
+        "content": "Happy New Year!",
+        "author": "user2",
+        "createdAt": "01-01-2023"
+      },
+      {
+        "content": "Java is amazing!",
+        "author": "user3",
+        "createdAt": "01-03-2023"
+      }
+    ],
+    "followers": [
+      "user2",
+      "user3"
+    ],
+    "following": [
+      "user2",
+      "user3"
+    ],
+    "password": 92394
+  },
+  "user2": {
+    "tweets": [
+      {
+        "content": "Happy New Year!",
+        "author": "user2",
+        "createdAt": "01-01-2023"
+      },
+      {
+        "content": "I'm learning Python!",
+        "author": "user2",
+        "createdAt": "01-03-2023"
+      }
+    ],
+    "retweets": [
+      {
+        "content": "Hello, world!",
+        "author": "user1",
+        "createdAt": "01-01-2023"
+      },
+      {
+        "content": "Java is amazing!",
+        "author": "user3",
+        "createdAt": "01-03-2023"
+      }
+    ],
+    "followers": [
+      "user1",
+      "user3"
+    ],
+    "following": [
+      "user1",
+      "user3"
+    ],
+    "password": 23567
+  },
+  "user3": {
+    "tweets": [
+      {
+        "content": "Starting a new project!",
+        "author": "user3",
+        "createdAt": "01-05-2023"
+      },
+      {
+        "content": "Java is amazing!",
+        "author": "user3",
+        "createdAt": "01-06-2023"
+      }
+    ],
+    "retweets": [
+      {
+        "content": "Hello, world!",
+        "author": "user1",
+        "createdAt": "01-01-2023"
+      },
+      {
+        "content": "Happy New Year!",
+        "author": "user2",
+        "createdAt": "01-01-2023"
+      }
+    ],
+    "followers": [
+      "user1",
+      "user2"
+    ],
+    "following": [
+      "user1",
+      "user2"
+    ],
+    "password": 56239
+  },
+  "user4": {
+    "tweets": [
+      {
+        "content": "Excited for the weekend!",
+        "author": "user4",
+        "createdAt": "01-05-2023"
+      },
+      {
+        "content": "Working on a cool new app!",
+        "author": "user4",
+        "createdAt": "01-06-2023"
+      }
+    ],
+    "retweets": [
+      {
+        "content": "Java is amazing!",
+        "author": "user3",
+        "createdAt": "01-03-2023"
+      },
+      {
+        "content": "I'm learning Python!",
+        "author": "user2",
+        "createdAt": "01-03-2023"
+      }
+    ],
+    "followers": [
+      "user2",
+      "user3"
+    ],
+    "following": [
+      "user2",
+      "user3"
+    ],
+    "password": 74829
+  },
+  "user5": {
+    "tweets": [
+      {
+        "content": "Finally completed my project!",
+        "author": "user5",
+        "createdAt": "01-10-2023"
+      },
+      {
+        "content": "Going on vacation!",
+        "author": "user5",
+        "createdAt": "01-12-2023"
+      }
+    ],
+    "retweets": [
+      {
+        "content": "Working on a cool new app!",
+        "author": "user4",
+        "createdAt": "01-06-2023"
+      },
+      {
+        "content": "Java is amazing!",
+        "author": "user3",
+        "createdAt": "01-03-2023"
+      }
+    ],
+    "followers": [
+      "user1",
+      "user3"
+    ],
+    "following": [
+      "user1",
+      "user3"
+    ],
+    "password": 10475
+  },
+  "user6": {
+    "tweets": [
+      {
+        "content": "Just got a new job!",
+        "author": "user6",
+        "createdAt": "01-15-2023"
+      },
+      {
+        "content": "Exploring new technologies!",
+        "author": "user6",
+        "createdAt": "01-17-2023"
+      }
+    ],
+    "retweets": [
+      {
+        "content": "I'm learning Python!",
+        "author": "user2",
+        "createdAt": "01-03-2023"
+      },
+      {
+        "content": "Java is amazing!",
+        "author": "user3",
+        "createdAt": "01-03-2023"
+      }
+    ],
+    "followers": [
+      "user1",
+      "user4"
+    ],
+    "following": [
+      "user1",
+      "user4"
+    ],
+    "password": 45612
+  },
+  "user7": {
+    "tweets": [
+      {
+        "content": "Attending a tech conference!",
+        "author": "user7",
+        "createdAt": "01-20-2023"
+      },
+      {
+        "content": "Met some amazing people!",
+        "author": "user7",
+        "createdAt": "01-21-2023"
+      }
+    ],
+    "retweets": [
+      {
+        "content": "Finally completed my project!",
+        "author": "user5",
+        "createdAt": "01-10-2023"
+      },
+      {
+        "content": "Working on a cool new app!",
+        "author": "user4",
+        "createdAt": "01-06-2023"
+      }
+    ],
+    "followers": [
+      "user2",
+      "user5"
+    ],
+    "following": [
+      "user2",
+      "user5"
+    ],
+    "password": 98123
+  },
+  "user8": {
+    "tweets": [
+      {
+        "content": "Trying out a new programming language!",
+        "author": "user8",
+        "createdAt": "01-25-2023"
+      },
+      {
+        "content": "This language is so cool!",
+        "author": "user8",
+        "createdAt": "01-26-2023"
+      }
+    ],
+    "retweets": [
+      {
+        "content": "Trying out a new programming language!",
+        "author": "user8",
+        "createdAt": "01-25-2023"
+      },
+      {
+        "content": "This language is so cool!",
+        "author": "user8",
+        "createdAt": "01-26-2023"
+      }
+    ],
+    "followers": [
+      "user3",
+      "user6"
+    ],
+    "following": [
+      "user3",
+      "user6"
+    ],
+    "password": 87532
+  },
+  "user9": {
+    "tweets": [
+      {
+        "content": "Celebrating my birthday!",
+        "author": "user9",
+        "createdAt": "01-30-2023"
+      },
+      {
+        "content": "Had a great time with friends!",
+        "author": "user9",
+        "createdAt": "01-31-2023"
+      }
+    ],
+    "retweets": [
+      {
+        "content": "Met some amazing people!",
+        "author": "user7",
+        "createdAt": "01-21-2023"
+      },
+      {
+        "content": "This language is so cool!",
+        "author": "user8",
+        "createdAt": "01-26-2023"
+      }
+    ],
+    "followers": [
+      "user7",
+      "user8"
+    ],
+    "following": [
+      "user7",
+      "user8"
+    ],
+    "password": 32895
+  },
+  "user10": {
+    "tweets": [
+      {
+        "content": "Starting my own business!",
+        "author": "user10",
+        "createdAt": "02-02-2023"
+      },
+      {
+        "content": "Can't wait to see where this goes!",
+        "author": "user10",
+        "createdAt": "02-03-2023"
+      }
+    ],
+    "retweets": [
+      {
+        "content": "Had a great time with friends!",
+        "author": "user9",
+        "createdAt": "01-31-2023"
+      },
+      {
+        "content": "Trying out a new programming language!",
+        "author": "user8",
+        "createdAt": "01-25-2023"
+      }
+    ],
+    "followers": [
+      "user9",
+      "user4"
+    ],
+    "following": [
+      "user9",
+      "user4"
+    ],
+    "password": 61784
+  }
+}
+
