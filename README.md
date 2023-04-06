@@ -3,6 +3,15 @@
 ## High Level UML Diagram
 <img src = "https://github.com/cezar-r/twittercli/blob/main/Untitled.png">
 
+## Running
+- You can compile and run the program with the commands below:
+```
+git clone https://github.com/cezar-r/twittercli
+cd twittercli/src
+javac *.java
+java Main
+```
+
 ## Basic Flow 
 
 - The app will start in the main() call by initializing the `TwitterCLIViewerController`, where it will display the option to login/signup. The terminal output should look like something below. Would be cool to add some ascii art as well:
