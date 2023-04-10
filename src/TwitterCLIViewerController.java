@@ -1,5 +1,9 @@
 import java.lang.reflect.Array;
+import java.time.LocalDate;
 import java.util.Scanner;
+
+import javax.print.attribute.standard.DateTimeAtCompleted;
+
 import java.util.*;
 
 
@@ -134,15 +138,54 @@ public class TwitterCLIViewerController {
     }
 
     private static void searchPage() {
-        // TODO
+    	System.out.println(LINESEPARATOR + "\nEnter search keyword:");
+        String keyword = scanner.nextLine();
+        ArrayList<Tweet> searchResults = new ArrayList<>();
+        for (Tweet tweet : userFeed) {
+            if (tweet.content().contains(keyword)) {
+                searchResults.add(tweet);
+            }
+        }
+        if (searchResults.size() == 0) {
+            System.out.println("No tweets found containing the keyword \"" + keyword + "\".\n");
+        } else {
+            System.out.println(LINESEPARATOR + "\nSearch results for keyword \"" + keyword + "\":");
+            for (int i = 0; i < searchResults.size(); i++) {
+                System.out.println((i+1) + ". " + searchResults.get(i).toString());
+            }
+            System.out.println(LINESEPARATOR);
+        }
+        System.out.println(NAVBAR.replaceFirst("\\[s\\]", "[#]") + "\n");
+        String input = scanner.nextLine();
+        navigate(input);
     }
 
     private static void tweetPage() {
-        // TODO
+    	Date currentDate = new Date();
+    	System.out.println(LINESEPARATOR + "\nCompose new tweet:\n");
+        String content = scanner.nextLine();
+        Tweet newTweet = new Tweet(content, curUsername, currentDate); 
+        userFeed.add(0, newTweet);
+        userData.addTweet(curUsername, newTweet);
+        System.out.println("\nTweet posted!\n");
+        homePage();
     }
 
     private static void profilePage(String username) {
-        // TODO
+    	System.out.println(LINESEPARATOR + "\n" + curUsername + "'s Profile\n" + LINESEPARATOR);
+    	System.out.println("User: " + curUsername +"\n");
+        List<Tweet> userTweets = userData.getTweets(curUsername);
+        if (userTweets.size() == 0) {
+            System.out.println("No tweets to display!\n");
+        } else {
+            for (Tweet tweet : userTweets) {
+                System.out.println(tweet.toString() + LINESEPARATOR);
+            }
+        }
+        System.out.println(NAVBAR.replaceFirst("\\[f\\]", "[#]"));
+
+        String input = scanner.nextLine();
+        navigate(input);
     }
 
     private static void profilePage() {
