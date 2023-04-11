@@ -1,3 +1,9 @@
+/**
+ * @file: Main.java
+ * @author: Cezar Rata
+ * @description: Some fun ascii art for the welcome screen :)
+ */
+
 public class AsciiArt {
 
     public static String ascii = """
