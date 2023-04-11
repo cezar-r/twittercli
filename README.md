@@ -11,11 +11,21 @@
 - The two sorting algorithms are used to sort the tweets on the users feed, based on a score given to those tweets. We implemented both, so that we can use [insertion sort](https://github.com/cezar-r/twittercli/blob/main/src/CoupleSorting.java#L32) when the dataset is smaller, and we can also use [merge sort](https://github.com/cezar-r/twittercli/blob/main/src/CoupleSorting.java#L53) when our dataset is larger.
 
 ## Installation and Running
-- You can compile and run the program with the commands below:
+#### You can compile and run the program with the commands below:
+- Clone the repository
 ```
 git clone https://github.com/cezar-r/twittercli
+```
+- Navigate into directory
+```
 cd twittercli/src
+```
+- Compile all java files
+```
 javac *.java
+```
+- Run the program
+```
 java Main
 ```
 
