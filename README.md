@@ -4,6 +4,12 @@
 - [GitHub Repo](https://github.com/cezar-r/twittercli)
 - [Presentation](presentation_url_here)
 
+## Description
+- This program implements a lightweight Twitter app that can be used on the command line. This app allows you to create an account, view tweets, search for friends, and write tweets yourself!
+- The main goal behind this project was to implement various data structures and algorithms, that could support a program like Twitter. In this program, we implemented **Hashtables**, **merge sort**, and **insertion sort** from scratch.
+- The [hashtable](https://github.com/cezar-r/twittercli/blob/main/src/HashTable.java) was primarily used as the database for the app, as hashtables can store data in a relation manner. We needed a way to associate users with their tweets, followers, and password.
+- The two sorting algorithms are used to sort the tweets on the users feed, based on a score given to those tweets. We implemented both, so that we can use [insertion sort](https://github.com/cezar-r/twittercli/blob/main/src/CoupleSorting.java#L32) when the dataset is smaller, and we can also use [merge sort](https://github.com/cezar-r/twittercli/blob/main/src/CoupleSorting.java#L53) when our dataset is larger.
+
 ## Installation and Running
 - You can compile and run the program with the commands below:
 ```
