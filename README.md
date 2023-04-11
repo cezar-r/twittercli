@@ -1,9 +1,6 @@
 # Twitter CLI CSC 345 Project
 
-## High Level UML Diagram
-<img src = "https://github.com/cezar-r/twittercli/blob/main/Untitled.png">
-
-## Running
+## Installation and Running
 - You can compile and run the program with the commands below:
 ```
 git clone https://github.com/cezar-r/twittercli
@@ -110,3 +107,7 @@ View Following[3]
 
 Home[a]  Search[s]  Tweet[d]  Profile[#]
 ```
+
+## Eary Stage High Level UML Diagram
+<img src = "https://github.com/cezar-r/twittercli/blob/main/Untitled.png">
+
