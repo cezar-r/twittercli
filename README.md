@@ -2,7 +2,7 @@
 
 ## Links
 - [GitHub Repo](https://github.com/cezar-r/twittercli)
-- [Presentation](presentation_url_here)
+- [Presentation](https://www.youtube.com/watch?v=4Qp148yHDYk)
 
 ## Description
 - This program implements a lightweight Twitter app that can be used on the command line. This app allows you to create an account, view tweets, search for friends, and write tweets yourself!
