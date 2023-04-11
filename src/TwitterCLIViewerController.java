@@ -138,26 +138,15 @@ public class TwitterCLIViewerController {
     }
 
     private static void searchPage() {
-    	System.out.println(LINESEPARATOR + "\nEnter search keyword:");
-        String keyword = scanner.nextLine();
-        ArrayList<Tweet> searchResults = new ArrayList<>();
-        for (Tweet tweet : userFeed) {
-            if (tweet.content().contains(keyword)) {
-                searchResults.add(tweet);
-            }
-        }
-        if (searchResults.size() == 0) {
-            System.out.println("No tweets found containing the keyword \"" + keyword + "\".\n");
+    	System.out.println(LINESEPARATOR + "\nEnter username to search for:");
+        String username = scanner.nextLine();
+        HashTable<String, Object> user = userData.getUser(username);
+        if (user == null) {
+            System.out.println("User \"" + username + "\" not found.\n");
         } else {
-            System.out.println(LINESEPARATOR + "\nSearch results for keyword \"" + keyword + "\":");
-            for (int i = 0; i < searchResults.size(); i++) {
-                System.out.println((i+1) + ". " + searchResults.get(i).toString());
-            }
-            System.out.println(LINESEPARATOR);
+            System.out.println(LINESEPARATOR + "\nTweets from @\"" + username + "\":");
+            System.out.println(userData.getTweets(username));
         }
-        System.out.println(NAVBAR.replaceFirst("\\[s\\]", "[#]") + "\n");
-        String input = scanner.nextLine();
-        navigate(input);
     }
 
     private static void tweetPage() {
@@ -171,25 +160,54 @@ public class TwitterCLIViewerController {
         homePage();
     }
 
-    private static void profilePage(String username) {
-    	System.out.println(LINESEPARATOR + "\n" + curUsername + "'s Profile\n" + LINESEPARATOR);
-    	System.out.println("User: " + curUsername +"\n");
-        List<Tweet> userTweets = userData.getTweets(curUsername);
-        if (userTweets.size() == 0) {
-            System.out.println("No tweets to display!\n");
-        } else {
-            for (Tweet tweet : userTweets) {
-                System.out.println(tweet.toString() + LINESEPARATOR);
-            }
-        }
-        System.out.println(NAVBAR.replaceFirst("\\[f\\]", "[#]"));
+    private static void profilePage() {
+        String username = "@" + curUsername;
+        int numTweets = userData.getTweets(curUsername).size();
+        int numFollowers = userData.getFollowers(curUsername).size();
+        int numFollowing = userData.getFollowing(curUsername).size();
+
+        System.out.println(LINESEPARATOR);
+        System.out.printf("Profile - %s\n\n", username);
+        System.out.printf("%d Tweets\t%d Followers\t%d Following\n\n", numTweets, numFollowers, numFollowing);
+        System.out.println("Follow[1]\tView Tweets[2]\tView Followers[3]\tView Following[4]\n");
+        System.out.println(LINESEPARATOR);
+        System.out.println(NAVBAR);
 
         String input = scanner.nextLine();
-        navigate(input);
-    }
-
-    private static void profilePage() {
-        profilePage(curUsername);
+        try {
+            int choice = Integer.parseInt(input);
+            switch (choice) {
+                case 1 -> {
+                    System.out.printf("Followed %s!\n", username);
+                    userData.addFollower(curUsername, curUsername);
+                }
+                case 2 -> {
+                    System.out.printf("\n--- %s's Tweets ---\n\n", username);
+                    ArrayList<Tweet> tweets = userData.getTweets(curUsername);
+                    for (Tweet tweet : tweets) {
+                        System.out.println(tweet.toString());
+                    }
+                }
+                case 3 -> {
+                    System.out.printf("\n--- %s's Followers ---\n\n", username);
+                    ArrayList<String> followers = userData.getFollowers(curUsername);
+                    for (String follower : followers) {
+                        System.out.println("@" + follower);
+                    }       
+                }
+                case 4 -> {
+                    System.out.printf("\n--- %s is Following ---\n\n", username);
+                    ArrayList<String> following = userData.getFollowing(curUsername);
+                    for (String follow : following) {
+                        System.out.println("@" + follow);
+                    }
+                }
+                default -> exit();
+            }
+        } catch (Exception e) {
+            navigate(input);
+        }
+        profilePage();
     }
 
     private static void navigate(String page) {
