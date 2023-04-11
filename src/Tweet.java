@@ -1,6 +1,16 @@
+/**
+ * @file: Tweet.java
+ * @description: This file contains a class that encapsulates a tweet
+ * @author: Cezar Rata
+ */
+
 import java.util.Date;
 import java.text.SimpleDateFormat;
 
+/**
+ * This class encapsulates a tweet. It holds the tweet content, author, and creation date. It also
+ * comes with a toString() method to display the tweet.
+ */
 public class Tweet {
 
     private final String content;
@@ -25,6 +35,21 @@ public class Tweet {
         return createdAt;
     }
 
+    /**
+     * Checks if this tweet equals another
+     * @param otherTweet -> tweet to compare to
+     * @return true if every attribute is the same, otherwise false
+     */
+    public boolean equals(Tweet otherTweet) {
+        return content.equals(otherTweet.content()) &&
+                createdBy.equals(otherTweet.createdBy()) &&
+                createdAt.equals(otherTweet.createdAt());
+    }
+
+    /**
+     * Returns a string representation of tweet
+     * @return String -> String representation of tweet
+     */
     public String toString() {
         StringBuilder str = new StringBuilder();
         str.append("@").append(createdBy).append("\n");

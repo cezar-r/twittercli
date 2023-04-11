@@ -1,7 +1,16 @@
+/**
+ * @file: HashTable.java
+ * @description: This file implements a Hashtable from scratch
+ * @author: Connor Olive
+ */
+
 import java.util.LinkedList;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * Class representing a hashtable
+ */
 public class HashTable<K, V> {
     private static final int DEFAULT_CAPACITY = 16;
     private final LinkedList<Entry<K, V>>[] table;
@@ -19,10 +28,19 @@ public class HashTable<K, V> {
         }
     }
 
+    /**
+     * Returns the size of the hashtable
+     * @return size -> number of keys
+     */
     public int size() {
         return size;
     }
 
+    /**
+     * Adds a key value pair to the hashtable. If the key exists, the value gets overwritten
+     * @param key -> key
+     * @param value -> value
+     */
     public void put(K key, V value) {
         int index = getIndex(key);
         Entry<K, V> entry = new Entry<>(key, value);
@@ -36,6 +54,11 @@ public class HashTable<K, V> {
         size++;
     }
 
+    /**
+     * Returns the value of an associated key
+     * @param key -> key to search for
+     * @return e.value -> value associated with key
+     */
     public V get(K key) {
         int index = getIndex(key);
         for (Entry<K, V> e : table[index]) {
@@ -46,17 +69,10 @@ public class HashTable<K, V> {
         return null;
     }
 
-    public void remove(K key) {
-        int index = getIndex(key);
-        for (Entry<K, V> e : table[index]) {
-            if (e.key.equals(key)) {
-                table[index].remove(e);
-                size--;
-                return;
-            }
-        }
-    }
-
+    /**
+     * Returns every key in a set
+     * @return Set -> set containing every key
+     */
     public Set<K> keySet() {
         Set<K> keys = new HashSet<>();
         for (LinkedList<Entry<K, V>> list : table) {
@@ -67,10 +83,20 @@ public class HashTable<K, V> {
         return keys;
     }
 
+    /**
+     * Returns the index of a key
+     * @param key -> key
+     * @return int -> index of key
+     */
     private int getIndex(K key) {
         return (key.hashCode() & 0x7fffffff) % table.length;
     }
 
+    /**
+     * Class representing a key-value pair in the hashtable
+     * @param <K>
+     * @param <V>
+     */
     private static class Entry<K, V> {
         private final K key;
         private V value;
