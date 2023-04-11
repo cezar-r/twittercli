@@ -133,5 +133,5 @@ Home[a]  Search[s]  Tweet[d]  Profile[#]
 ```
 
 ## Eary Stage High Level UML Diagram
-<img src = "https://github.com/cezar-r/twittercli/blob/main/Untitled.png">
+<img src = "Untitled.png">
 
