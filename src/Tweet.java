@@ -42,7 +42,7 @@ public class Tweet {
             }
         }
         SimpleDateFormat sdf = new SimpleDateFormat("MM-dd-yyyy");
-        str.append(curWord).append("\n\n").append(sdf.format(createdAt)).append("\n");
+        str.append(curWord).append("\n\n").append(sdf.format(createdAt));
         return str.toString();
     }
 

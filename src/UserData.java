@@ -16,7 +16,7 @@ public class UserData {
         return userData.get(username);
     }
 
-    public Set<String> keySet() {
+    public Set<String> getAllUsernames() {
         return userData.keySet();
     }
 
@@ -72,8 +72,26 @@ public class UserData {
 
     public void addFollowing(String username, String followingUsername) {
         ArrayList<String> following = getFollowing(username);
-        following.add(followingUsername);
-        userData.get(username).put("following", following);
+        if (!following.contains(followingUsername)) {
+            following.add(followingUsername);
+            userData.get(username).put("following", following);
+            addFollower(followingUsername, username);
+        }
+    }
+
+    public void unfollow(String username, String unfollowingUsername) {
+        ArrayList<String> following = getFollowing(username);
+        if (following.contains(unfollowingUsername)) {
+            following.remove(unfollowingUsername);
+            userData.get(username).put("following", following);
+            removeFollower(unfollowingUsername, username);
+        }
+    }
+
+    public void removeFollower(String username, String follower) {
+        ArrayList<String> followers = getFollowers(username);
+        followers.remove(follower);
+        userData.get(username).put("followers", followers);
     }
 
     public boolean passwordEquals(String username, String password) {

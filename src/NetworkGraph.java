@@ -12,7 +12,7 @@ public class NetworkGraph {
     }
 
     private static void buildGraph() {
-        for (String username: userData.keySet()) {
+        for (String username: userData.getAllUsernames()) {
             graph.put(username, new HashSet<>(userData.getFollowing(username)));
             if (startingNode == null) {
                 startingNode = username;
