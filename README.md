@@ -28,6 +28,10 @@ javac *.java
 ```
 java Main
 ```
+- Testing
+```
+java Test
+```
 
 ## Basic Flow 
 
