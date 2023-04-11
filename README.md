@@ -1,5 +1,9 @@
 # Twitter CLI CSC 345 Project
 
+## Links
+- [GitHub Repo](https://github.com/cezar-r/twittercli)
+- [Presentation](presentation_url_here)
+
 ## Installation and Running
 - You can compile and run the program with the commands below:
 ```
